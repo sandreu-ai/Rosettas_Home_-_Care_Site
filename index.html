@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rosetta's Home & Care | Home Care Services in Lancaster, Texas</title>
+  <meta name="description" content="Rosetta's Home & Care provides compassionate personal care, light housekeeping, medication reminders, meal prep, errands, transportation, and appointment support in Lancaster, Texas." />
+  <style>
+    :root {
+      --navy: #0e436c;
+      --navy-dark: #092d49;
+      --red: #cd0036;
+      --red-dark: #a8002c;
+      --pale: #edf7f6;
+      --pale-2: #f8fcfc;
+      --white: #ffffff;
+      --ink: #17212b;
+      --muted: #5f6f7c;
+      --line: rgba(14, 67, 108, 0.16);
+      --shadow: 0 22px 55px rgba(14, 67, 108, 0.14);
+      --radius-xl: 30px;
+      --radius-lg: 22px;
+      --radius-md: 15px;
+      --max: 1160px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--pale-2);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(var(--max), calc(100% - 36px)); margin: 0 auto; }
+
+    .topbar { background: var(--navy); color: white; font-size: 14px; }
+    .topbar .container { display: flex; justify-content: space-between; gap: 18px; align-items: center; padding: 9px 0; }
+    .topbar a { color: white; font-weight: 800; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(248, 252, 252, 0.92);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
+    }
+    nav { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 14px 0; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 900; color: var(--navy); letter-spacing: -0.02em; }
+    .brand img { width: 74px; height: 54px; object-fit: contain; border-radius: 0; background: transparent; box-shadow: none; }
+    .brand span { font-size: 21px; }
+    .navlinks { display: flex; align-items: center; gap: 24px; font-size: 15px; font-weight: 800; color: var(--navy); }
+    .navlinks a:hover { color: var(--red); }
+    .actions { display: flex; gap: 10px; align-items: center; }
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 19px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 900;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--red); color: white; box-shadow: 0 15px 30px rgba(205,0,54,.22); }
+    .btn-primary:hover { background: var(--red-dark); }
+    .btn-navy { background: var(--navy); color: white; box-shadow: 0 15px 30px rgba(14,67,108,.22); }
+    .btn-outline { background: white; border-color: var(--line); color: var(--navy); }
+
+    .hero {
+      overflow: hidden;
+      position: relative;
+      background:
+        radial-gradient(circle at 86% 10%, rgba(205,0,54,.13), transparent 28%),
+        linear-gradient(180deg, var(--pale), #fff 70%);
+      padding: 70px 0 76px;
+    }
+    .hero-grid { display: grid; grid-template-columns: 1.02fr .98fr; gap: 52px; align-items: center; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: white;
+      color: var(--navy);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 13px;
+      font-weight: 900;
+      font-size: 14px;
+      margin-bottom: 18px;
+      box-shadow: 0 10px 24px rgba(14,67,108,.06);
+    }
+    .dot { width: 9px; height: 9px; background: var(--red); border-radius: 999px; }
+    h1 { margin: 0; color: var(--navy); font-size: clamp(42px, 6vw, 72px); line-height: .96; letter-spacing: -0.06em; }
+    .lead { margin: 24px 0 0; color: #415567; font-size: clamp(18px, 2.1vw, 22px); max-width: 650px; }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 30px; }
+    .trust-row { margin-top: 28px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 690px; }
+    .trust-pill { background: rgba(255,255,255,.74); border: 1px solid var(--line); border-radius: 16px; padding: 13px 14px; color: var(--navy); font-weight: 850; display: flex; align-items: center; gap: 8px; }
+    .check { color: var(--red); font-weight: 1000; }
+
+    .hero-card { position: relative; border-radius: 36px; overflow: hidden; min-height: 585px; box-shadow: var(--shadow); border: 10px solid white; background: var(--navy); }
+    .hero-card > img { width: 100%; height: 585px; object-fit: cover; opacity: .9; }
+    .hero-info {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 24px;
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(14px);
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: 0 18px 44px rgba(14,67,108,.18);
+    }
+    .hero-info strong { color: var(--navy); font-size: 21px; display: block; margin-bottom: 6px; }
+    .hero-info p { margin: 0; color: #526574; }
+
+    section { padding: 82px 0; }
+    .section-head { max-width: 760px; margin-bottom: 34px; }
+    .section-head.center { margin-inline: auto; text-align: center; }
+    h2 { margin: 0; color: var(--navy); font-size: clamp(32px, 4vw, 52px); line-height: 1.04; letter-spacing: -0.045em; }
+    .section-head p { margin: 15px 0 0; color: var(--muted); font-size: 18px; }
+
+    .mission { background: white; border-block: 1px solid var(--line); }
+    .mission-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 34px; align-items: center; }
+    .quote-card { background: var(--navy); color: white; border-radius: var(--radius-xl); padding: 34px; box-shadow: var(--shadow); }
+    .quote-card p { margin: 0 0 16px; font-size: 29px; line-height: 1.12; letter-spacing: -0.04em; font-weight: 900; }
+    .quote-card span { color: rgba(255,255,255,.76); }
+    .mission-copy { display: grid; gap: 15px; }
+    .mission-item { background: var(--pale); border: 1px solid var(--line); border-radius: 20px; padding: 20px; display: grid; grid-template-columns: 48px 1fr; gap: 15px; align-items: start; }
+    .icon { width: 48px; height: 48px; border-radius: 16px; background: rgba(205,0,54,.1); color: var(--red); display: grid; place-items: center; font-size: 21px; font-weight: 1000; line-height: 1; font-family: "Segoe UI Symbol", "Apple Color Emoji", Arial, sans-serif; }
+    .mission-item h3, .service-card h3, .step h3 { margin: 0 0 5px; color: var(--navy); }
+    .mission-item p, .service-card p, .step p { margin: 0; color: #5b6d7b; }
+
+    .services { background: linear-gradient(180deg, #fff, var(--pale)); }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .service-card { background: white; border: 1px solid var(--line); border-radius: 26px; overflow: hidden; box-shadow: 0 14px 34px rgba(14,67,108,.07); }
+    .service-card img { width: 100%; height: 165px; object-fit: cover; background: var(--pale); }
+    .service-card .content { padding: 22px; }
+    .service-card h3 { font-size: 21px; letter-spacing: -0.02em; }
+    .service-card ul { margin: 10px 0 0; padding-left: 19px; color: #5b6d7b; }
+
+    .about-band { background: linear-gradient(135deg, var(--navy), var(--navy-dark)); color: white; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: center; }
+    .about-band h2 { color: white; }
+    .about-band p { color: rgba(255,255,255,.8); font-size: 18px; }
+    .stat-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 22px; }
+    .stat { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.16); border-radius: 22px; padding: 20px; }
+    .stat strong { display: block; font-size: 32px; color: white; }
+    .stat span { color: rgba(255,255,255,.72); }
+
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; counter-reset: step; }
+    .step { background: white; border: 1px solid var(--line); border-radius: 26px; padding: 28px; box-shadow: 0 14px 34px rgba(14,67,108,.06); }
+    .step::before { counter-increment: step; content: counter(step); width: 46px; height: 46px; display: grid; place-items: center; border-radius: 50%; background: var(--red); color: white; font-weight: 1000; margin-bottom: 18px; }
+
+    .contact-section { background: white; border-block: 1px solid var(--line); }
+    .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 36px; align-items: start; }
+    .contact-panel { background: var(--pale); border: 1px solid var(--line); border-radius: var(--radius-xl); padding: 30px; position: sticky; top: 110px; }
+    .contact-panel h2 { margin-bottom: 14px; }
+    .contact-list { display: grid; gap: 12px; margin-top: 24px; }
+    .contact-list a, .contact-list div { background: white; border: 1px solid var(--line); border-radius: 17px; padding: 14px 16px; color: var(--navy); font-weight: 850; }
+    .ghl-form-card { background: white; border: 1px solid var(--line); border-radius: var(--radius-xl); box-shadow: var(--shadow); padding: 26px; }
+    .ghl-form-card iframe { display: block; width: 100%; min-height: 760px; border: 0; border-radius: 18px; background: #fff; }
+    .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    label { display: grid; gap: 7px; font-weight: 850; color: #31465a; font-size: 14px; }
+    input, select, textarea { width: 100%; border: 1px solid rgba(14,67,108,.22); border-radius: 14px; padding: 14px; font: inherit; outline: none; background: #fff; color: var(--ink); }
+    input:focus, select:focus, textarea:focus { border-color: var(--red); box-shadow: 0 0 0 4px rgba(205,0,54,.1); }
+    textarea { min-height: 125px; resize: vertical; }
+    .full { grid-column: 1 / -1; }
+    .consent { margin: 15px 0 20px; color: #667987; font-size: 12.5px; }
+
+    .cta-strip { background: var(--red); color: white; padding: 48px 0; }
+    .cta-strip .container { display: flex; justify-content: space-between; align-items: center; gap: 22px; }
+    .cta-strip h2 { color: white; font-size: clamp(28px, 4vw, 44px); }
+    .cta-strip p { margin: 8px 0 0; color: rgba(255,255,255,.86); }
+
+    .faq-grid { max-width: 900px; margin: 0 auto; display: grid; gap: 13px; }
+    details { background: white; border: 1px solid var(--line); border-radius: 18px; padding: 18px 20px; }
+    summary { cursor: pointer; color: var(--navy); font-weight: 950; }
+    details p { margin: 12px 0 0; color: #5b6d7b; }
+
+    footer { background: var(--navy-dark); color: white; padding: 50px 0 88px; }
+    .footer-grid { display: grid; grid-template-columns: 1.3fr .9fr .8fr; gap: 28px; }
+    footer .footer-brand { display: flex; gap: 13px; align-items: center; margin-bottom: 12px; }
+    footer img { width: 64px; height: 64px; object-fit: contain; border-radius: 50%; background: white; }
+    footer p, footer a, footer li { color: rgba(255,255,255,.72); }
+    footer h3 { margin: 0 0 12px; }
+    footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 9px; }
+    .disclaimer { border-top: 1px solid rgba(255,255,255,.14); margin-top: 32px; padding-top: 18px; color: rgba(255,255,255,.62); font-size: 13px; }
+
+    .mobile-call { position: fixed; left: 14px; right: 14px; bottom: 14px; z-index: 80; display: none; text-align: center; background: var(--red); color: white; padding: 15px 20px; border-radius: 999px; box-shadow: 0 18px 38px rgba(14,67,108,.28); font-weight: 1000; }
+    .toast { position: fixed; right: 18px; bottom: 18px; max-width: 380px; background: var(--navy-dark); color: white; padding: 16px 18px; border-radius: 18px; box-shadow: var(--shadow); opacity: 0; transform: translateY(12px); transition: .22s ease; pointer-events: none; z-index: 100; }
+    .toast.show { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 980px) {
+      .topbar .container { flex-direction: column; text-align: center; gap: 4px; }
+      .navlinks, .actions .btn-outline { display: none; }
+      .hero-grid, .mission-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .hero-card, .hero-card > img { min-height: 420px; height: 420px; }
+      .trust-row, .services-grid, .steps, .footer-grid { grid-template-columns: 1fr; }
+      .contact-panel { position: static; }
+      .cta-strip .container { flex-direction: column; text-align: center; align-items: stretch; }
+      .mobile-call { display: block; }
+      .toast { left: 14px; right: 14px; bottom: 82px; max-width: none; }
+    }
+    @media (max-width: 620px) {
+      .brand span { font-size: 17px; }
+      .brand img { width: 60px; height: 42px; }
+      .hero { padding: 48px 0 58px; }
+      .hero-cta .btn { width: 100%; }
+      .fields { grid-template-columns: 1fr; }
+      section { padding: 62px 0; }
+      .quote-card, .contact-panel, .ghl-form-card { padding: 22px; border-radius: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <span>Rosetta's Home & Care Services · Lancaster, Texas</span>
+      <span><a href="tel:+19728787440">Call (972) 878-7440</a> · <a href="mailto:rosettashomecare57@gmail.com">rosettashomecare57@gmail.com</a></span>
+    </div>
+  </div>
+
+  <header>
+    <div class="container">
+      <nav aria-label="Main navigation">
+        <a href="#top" class="brand" aria-label="Rosetta's Home & Care homepage">
+          <img src="assets/logo-new.png" alt="Rosetta's Home & Care logo" />
+          <span>Rosetta's Home & Care</span>
+        </a>
+        <div class="navlinks">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#process">How it works</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="actions">
+          <a class="btn btn-outline" href="tel:+19728787440">Call Now</a>
+          <a class="btn btn-primary" href="#contact">Free Consultation</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> Compassionate care at home</div>
+          <h1>We provide the care your loved one deserves.</h1>
+          <p class="lead">Rosetta's Home & Care helps clients and families feel supported at home with personal care, light housekeeping, meal prep, medication reminders, errands, transportation, and appointment support.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#contact">Request a Free Home Care Consultation</a>
+            <a class="btn btn-navy" href="tel:+19728787440">Call (972) 878-7440</a>
+          </div>
+          <div class="trust-row">
+            <div class="trust-pill"><span class="check">✓</span> 15 years medical-field experience</div>
+            <div class="trust-pill"><span class="check">✓</span> Home care support in Lancaster, TX</div>
+            <div class="trust-pill"><span class="check">✓</span> Compassionate, high-quality service</div>
+          </div>
+        </div>
+        <div class="hero-card" aria-label="Home care support image">
+          <img src="assets/hero.jpg" alt="Caregiver supporting a senior at home" />
+          <div class="hero-info">
+            <strong>We treat your home like our home.</strong>
+            <p>Get clear next steps, a caring follow-up, and support designed around your loved one's needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mission">
+      <div class="container mission-grid">
+        <div class="quote-card">
+          <p>Compassion, dedication, integrity, and peace of mind at home.</p>
+          <span>A caring team focused on helping clients feel supported, respected, and comfortable at home.</span>
+        </div>
+        <div class="mission-copy">
+          <div class="mission-item">
+            <div class="icon">♡</div>
+            <div><h3>Care with dignity</h3><p>Support that helps clients maintain well-being, independence, and comfort in familiar surroundings.</p></div>
+          </div>
+          <div class="mission-item">
+            <div class="icon">♡</div>
+            <div><h3>Help for families</h3><p>Families get a simple way to ask questions, request care information, and understand the next step.</p></div>
+          </div>
+          <div class="mission-item">
+            <div class="icon">☎</div>
+            <div><h3>Fast contact path</h3><p>Every major section leads to a call, email, or consultation request so inquiries do not get lost.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-head center">
+          <h2>Home care services designed with you in mind.</h2>
+          <p>Rosetta's Home & Care offers personalized, compassionate support for everyday needs at home.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <img src="assets/personal-care.png" alt="Caregiver helping with personal care and grooming" />
+            <div class="content"><h3>Personal Care Services</h3><p>Respectful daily support with routines that help clients feel comfortable and cared for.</p><ul><li>Feeding assistance</li><li>Grooming support</li><li>Dressing assistance</li></ul></div>
+          </article>
+          <article class="service-card">
+            <img src="assets/housekeeping.png" alt="Caregiver helping with light housekeeping" />
+            <div class="content"><h3>Light Housekeeping</h3><p>Practical help keeping the home environment clean, organized, and manageable.</p><ul><li>Dusting, sweeping, mopping</li><li>Dishes and counters</li><li>Light laundry and trash removal</li></ul></div>
+          </article>
+          <article class="service-card">
+            <img src="assets/meal-prep.png" alt="Caregiver preparing a meal at home" />
+            <div class="content"><h3>Meal Prep</h3><p>Meal support based on preferences, dietary needs, portions, and cleanup after meals.</p><ul><li>Meal planning support</li><li>Prepared meals</li><li>Kitchen cleanup</li></ul></div>
+          </article>
+          <article class="service-card">
+            <img src="assets/medication-reminders.png" alt="Caregiver reviewing a pill organizer reminder" />
+            <div class="content"><h3>Medication Reminders</h3><p>Clear reminders and routine support to help clients stay on schedule.</p><ul><li>Pill organizer reminders</li><li>Alarm or note reminders</li><li>Phone check-ins where appropriate</li></ul></div>
+          </article>
+          <article class="service-card">
+            <img src="assets/errands.png" alt="Caregiver helping with groceries and errands" />
+            <div class="content"><h3>Running Errands</h3><p>Help with the errands that make daily life easier for clients and families.</p><ul><li>Grocery shopping</li><li>Prescription pickup</li><li>Mail, packages, and household essentials</li></ul></div>
+          </article>
+          <article class="service-card">
+            <img src="assets/transportation.png" alt="Caregiver helping with transportation to appointments" />
+            <div class="content"><h3>Transportation & Appointments</h3><p>Support organizing appointments and getting to important errands or visits.</p><ul><li>Transportation support</li><li>Appointment reminders</li><li>Coordination with family members</li></ul></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-band" id="about">
+      <div class="container about-grid">
+        <div>
+          <h2>Who we are</h2>
+          <p>With 15 years of experience in the medical field, Rosetta's passion for helping others inspired her to start a home care agency with a heartfelt mission: provide compassionate, personalized care to those who need it most.</p>
+          <p>Rosetta's Home & Care is committed to serving the community and making sure every individual receives love, support, and quality care within the comfort and safety of home.</p>
+        </div>
+        <div class="stat-row">
+          <div class="stat"><strong>15+</strong><span>years of medical-field experience</span></div>
+          <div class="stat"><strong>7</strong><span>core support service areas</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container">
+        <div class="section-head center">
+          <h2>Getting started is simple.</h2>
+          <p>Start with a quick call or free home care consultation request, and Rosetta's Home & Care will help you understand the next step.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><h3>Tell us what you need</h3><p>Call, email, or fill out the form with the type of help your loved one needs.</p></div>
+          <div class="step"><h3>We follow up</h3><p>Rosetta's Home & Care reviews your request and contacts you to learn more.</p></div>
+          <div class="step"><h3>Plan the next step</h3><p>Discuss service needs, timing, and how support can work in the home.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-panel">
+          <h2>Call now for a free home care consultation.</h2>
+          <p>Interested in high-quality service? Fill out the form and Rosetta's Home & Care will be in touch shortly.</p>
+          <div class="contact-list">
+            <a href="tel:+197****7440">Phone: (972) 878-7440</a>
+            <div>Fax: (214) 853-5987</div>
+            <a href="mailto:rosettashomecare57@gmail.com">Email: rosettashomecare57@gmail.com</a>
+            <div>Address: 1425 N Dallas Ave STE 304 A, Lancaster, Texas 75134</div>
+            <a href="https://api.leadconnectorhq.com/widget/booking/648cmOCtOjjeFrr9ZRJf">Book a free consultation</a>
+          </div>
+        </div>
+        <div class="ghl-form-card" aria-label="Free consultation request form">
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/form/iUswI1hsIBB39NxcWbYG"
+            id="inline-iUswI1hsIBB39NxcWbYG"
+            data-layout="1"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Rosetta's Home Care - Free Consultation Request"
+            data-form-id="iUswI1hsIBB39NxcWbYG"
+            title="Rosetta's Home Care - Free Consultation Request">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-strip">
+      <div class="container">
+        <div><h2>Need care information now?</h2><p>Call Rosetta's Home & Care directly or send a free consultation request.</p></div>
+        <a class="btn btn-outline" href="tel:+19728787440">Call (972) 878-7440</a>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-head center">
+          <h2>Questions families often ask.</h2>
+          <p>Clear answers make it easier to take the next step.</p>
+        </div>
+        <div class="faq-grid">
+          <details open><summary>What services does Rosetta's Home & Care provide?</summary><p>Services include personal care support, light housekeeping, medication reminders, meal prep, running errands, transportation, and organizing appointments or care coordination.</p></details>
+          <details><summary>Where is Rosetta's Home & Care located?</summary><p>The business address is 1425 N Dallas Ave STE 304 A, Lancaster, Texas 75134.</p></details>
+          <details><summary>How do I request a free consultation?</summary><p>Call (972) 878-7440, email rosettashomecare57@gmail.com, or complete the consultation request form on this page.</p></details>
+          <details><summary>Do you provide emergency medical help?</summary><p>This website is for home care service inquiries. If this is a medical emergency, call 911. Do not submit emergency medical information through the website form.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand"><img src="assets/logo-new.png" alt="Rosetta's Home & Care logo" /><h3>Rosetta's Home & Care Services</h3></div>
+          <p>Compassionate, high-quality home care support in Lancaster, Texas.</p>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="mailto:rosettashomecare57@gmail.com">rosettashomecare57@gmail.com</a></li>
+            <li><a href="tel:+197****7440">(972) 878-7440</a></li>
+            <li>Fax: (214) 853-5987</li>
+            <li>1425 N Dallas Ave STE 304 A, Lancaster, Texas 75134</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Quick links</h3>
+          <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Free Consultation</a></li>
+            <li><a href="https://rosettashomecare.com/">Current website</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="disclaimer">Rosetta's Home & Care provides home care service information through this website. This page is for general inquiry purposes and is not a substitute for emergency medical care. If this is a medical emergency, call 911.</div>
+    </div>
+  </footer>
+
+  <a class="mobile-call" href="tel:+19728787440">Call Rosetta's Home & Care</a>
+  <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+</body>
+</html>
