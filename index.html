@@ -146,6 +146,12 @@
     .service-card h3 { font-size: 21px; letter-spacing: -0.02em; }
     .service-card ul { margin: 10px 0 0; padding-left: 19px; color: #5b6d7b; }
 
+    .resource-section { background: white; border-block: 1px solid var(--line); }
+    .resource-card { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; background: var(--pale); border: 1px solid var(--line); border-radius: var(--radius-xl); padding: 30px; box-shadow: 0 14px 34px rgba(14,67,108,.06); }
+    .resource-card h3 { margin: 0 0 8px; color: var(--navy); font-size: 26px; letter-spacing: -0.03em; }
+    .resource-card p { margin: 0; color: #5b6d7b; }
+    .resource-note { margin-top: 12px; font-size: 13px; color: var(--muted); }
+
     .about-band { background: linear-gradient(135deg, var(--navy), var(--navy-dark)); color: white; }
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: center; }
     .about-band h2 { color: white; }
@@ -201,7 +207,7 @@
     @media (max-width: 980px) {
       .topbar .container { flex-direction: column; text-align: center; gap: 4px; }
       .navlinks, .actions .btn-outline { display: none; }
-      .hero-grid, .mission-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .hero-grid, .mission-grid, .about-grid, .contact-grid, .resource-card { grid-template-columns: 1fr; }
       .hero-card, .hero-card > img { min-height: 420px; height: 420px; }
       .trust-row, .services-grid, .steps, .footer-grid { grid-template-columns: 1fr; }
       .contact-panel { position: static; }
@@ -239,6 +245,7 @@
           <a href="#services">Services</a>
           <a href="#about">About</a>
           <a href="#process">How it works</a>
+          <a href="#resources">Resources</a>
           <a href="#contact">Contact</a>
         </div>
         <div class="actions">
@@ -259,6 +266,7 @@
           <div class="hero-cta">
             <a class="btn btn-primary" href="#contact">Request a Free Home Care Consultation</a>
             <a class="btn btn-navy" href="tel:+19728787440">Call (972) 878-7440</a>
+            <a class="btn btn-outline" href="assets/home-care-physician-support-form.pdf" target="_blank" rel="noopener">Print Doctor Form</a>
           </div>
           <div class="trust-row">
             <div class="trust-pill"><span class="check">✓</span> 15 years medical-field experience</div>
@@ -362,6 +370,23 @@
       </div>
     </section>
 
+    <section class="resource-section" id="resources">
+      <div class="container">
+        <div class="section-head center">
+          <h2>Printable form for doctor and insurance conversations.</h2>
+          <p>Clients and families can print this support form, ask a physician to complete it, and keep a copy for insurance or care coordination follow-up.</p>
+        </div>
+        <div class="resource-card">
+          <div>
+            <h3>Home Care Physician Support Form</h3>
+            <p>A simple PDF families can bring to a doctor's appointment when documenting home care support needs.</p>
+            <div class="resource-note">Coverage and reimbursement decisions are made by the insurance provider. This form is not a guarantee of approval or payment.</div>
+          </div>
+          <a class="btn btn-primary" href="assets/home-care-physician-support-form.pdf" target="_blank" rel="noopener">Download / Print PDF</a>
+        </div>
+      </div>
+    </section>
+
     <section class="contact-section" id="contact">
       <div class="container contact-grid">
         <div class="contact-panel">
@@ -411,6 +436,7 @@
           <details open><summary>What services does Rosetta's Home & Care provide?</summary><p>Services include personal care support, light housekeeping, medication reminders, meal prep, running errands, transportation, and organizing appointments or care coordination.</p></details>
           <details><summary>Where is Rosetta's Home & Care located?</summary><p>The business address is 1425 N Dallas Ave STE 304 A, Lancaster, Texas 75134.</p></details>
           <details><summary>How do I request a free consultation?</summary><p>Call (972) 878-7440, email rosettashomecare57@gmail.com, or complete the consultation request form on this page.</p></details>
+          <details><summary>Is there a doctor form I can print for insurance paperwork?</summary><p>Yes. Download the Home Care Physician Support Form from the Resources section, bring it to the doctor to complete, and keep a copy for insurance or care coordination follow-up. Insurance approval is not guaranteed by the form.</p></details>
           <details><summary>Do you provide emergency medical help?</summary><p>This website is for home care service inquiries. If this is a medical emergency, call 911. Do not submit emergency medical information through the website form.</p></details>
         </div>
       </div>
@@ -439,6 +465,7 @@
             <li><a href="#services">Services</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Free Consultation</a></li>
+            <li><a href="#resources">Doctor Form PDF</a></li>
             <li><a href="https://rosettashomecare.com/">Current website</a></li>
           </ul>
         </div>
