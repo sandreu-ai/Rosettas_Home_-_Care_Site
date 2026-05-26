@@ -172,6 +172,10 @@
     .contact-list { display: grid; gap: 12px; margin-top: 24px; }
     .contact-list a, .contact-list div { background: white; border: 1px solid var(--line); border-radius: 17px; padding: 14px 16px; color: var(--navy); font-weight: 850; }
     .ghl-form-card { background: white; border: 1px solid var(--line); border-radius: var(--radius-xl); box-shadow: var(--shadow); padding: 26px; }
+    .form-card-intro { margin-bottom: 18px; display: grid; gap: 10px; }
+    .form-card-intro h2 { font-size: clamp(28px, 3vw, 40px); }
+    .form-card-intro p { margin: 0; color: var(--muted); }
+    .btn-large { width: 100%; padding: 17px 22px; font-size: 18px; text-transform: uppercase; letter-spacing: .01em; }
     .ghl-form-card iframe { display: block; width: 100%; min-height: 760px; border: 0; border-radius: 18px; background: #fff; }
     .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     label { display: grid; gap: 7px; font-weight: 850; color: #31465a; font-size: 14px; }
@@ -211,6 +215,7 @@
       .hero-card, .hero-card > img { min-height: 420px; height: 420px; }
       .trust-row, .services-grid, .steps, .footer-grid { grid-template-columns: 1fr; }
       .contact-panel { position: static; }
+      .ghl-form-card { order: -1; }
       .cta-strip .container { flex-direction: column; text-align: center; align-items: stretch; }
       .mobile-call { display: block; }
       .toast { left: 14px; right: 14px; bottom: 82px; max-width: none; }
@@ -265,7 +270,7 @@
           <p class="lead">Rosetta's Home & Care helps clients and families feel supported at home with personal care, light housekeeping, meal prep, medication reminders, errands, transportation, and appointment support.</p>
           <div class="hero-cta">
             <a class="btn btn-primary" href="#contact">Request a Free Home Care Consultation</a>
-            <a class="btn btn-navy" href="tel:+19728787440">Call (972) 878-7440</a>
+            <a class="btn btn-primary" href="https://api.leadconnectorhq.com/widget/form/iUswI1hsIBB39NxcWbYG" target="_blank" rel="noopener">Fill Out Easy Intake Form</a>
             <a class="btn btn-outline" href="assets/home-care-physician-support-form.pdf" target="_blank" rel="noopener">Print Doctor Form</a>
           </div>
           <div class="trust-row">
@@ -280,6 +285,43 @@
             <strong>We treat your home like our home.</strong>
             <p>Get clear next steps, a caring follow-up, and support designed around your loved one's needs.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-panel">
+          <h2>Call now for a free home care consultation.</h2>
+          <p>Interested in high-quality service? Fill out the form and Rosetta's Home & Care will be in touch shortly.</p>
+          <div class="contact-list">
+            <a href="tel:+197****7440">Phone: (972) 878-7440</a>
+            <div>Fax: (214) 853-5987</div>
+            <a href="mailto:rosettashomecare57@gmail.com">Email: rosettashomecare57@gmail.com</a>
+            <div>Address: 1425 N Dallas Ave STE 304 A, Lancaster, Texas 75134</div>
+            <a href="https://api.leadconnectorhq.com/widget/booking/648cmOCtOjjeFrr9ZRJf">Book a free consultation</a>
+          </div>
+        </div>
+        <div class="ghl-form-card" aria-label="Free consultation request form">
+          <div class="form-card-intro">
+            <h2>Fill out the easy intake form.</h2>
+            <p>Share the care type, payment type, city, and best contact time. Please do not include diagnoses or medical details.</p>
+            <a class="btn btn-primary btn-large" href="https://api.leadconnectorhq.com/widget/form/iUswI1hsIBB39NxcWbYG" target="_blank" rel="noopener">Fill Out Easy Intake Form</a>
+          </div>
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/form/iUswI1hsIBB39NxcWbYG"
+            id="inline-iUswI1hsIBB39NxcWbYG"
+            data-layout="1"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Rosetta's Home Care - Free Consultation Request"
+            data-form-id="iUswI1hsIBB39NxcWbYG"
+            title="Rosetta's Home Care - Free Consultation Request">
+          </iframe>
         </div>
       </div>
     </section>
@@ -383,38 +425,6 @@
             <div class="resource-note">Coverage and reimbursement decisions are made by the insurance provider. This form is not a guarantee of approval or payment.</div>
           </div>
           <a class="btn btn-primary" href="assets/home-care-physician-support-form.pdf" target="_blank" rel="noopener">Download / Print PDF</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact-section" id="contact">
-      <div class="container contact-grid">
-        <div class="contact-panel">
-          <h2>Call now for a free home care consultation.</h2>
-          <p>Interested in high-quality service? Fill out the form and Rosetta's Home & Care will be in touch shortly.</p>
-          <div class="contact-list">
-            <a href="tel:+197****7440">Phone: (972) 878-7440</a>
-            <div>Fax: (214) 853-5987</div>
-            <a href="mailto:rosettashomecare57@gmail.com">Email: rosettashomecare57@gmail.com</a>
-            <div>Address: 1425 N Dallas Ave STE 304 A, Lancaster, Texas 75134</div>
-            <a href="https://api.leadconnectorhq.com/widget/booking/648cmOCtOjjeFrr9ZRJf">Book a free consultation</a>
-          </div>
-        </div>
-        <div class="ghl-form-card" aria-label="Free consultation request form">
-          <iframe
-            src="https://api.leadconnectorhq.com/widget/form/iUswI1hsIBB39NxcWbYG"
-            id="inline-iUswI1hsIBB39NxcWbYG"
-            data-layout="1"
-            data-trigger-type="alwaysShow"
-            data-trigger-value=""
-            data-activation-type="alwaysActivated"
-            data-activation-value=""
-            data-deactivation-type="neverDeactivate"
-            data-deactivation-value=""
-            data-form-name="Rosetta's Home Care - Free Consultation Request"
-            data-form-id="iUswI1hsIBB39NxcWbYG"
-            title="Rosetta's Home Care - Free Consultation Request">
-          </iframe>
         </div>
       </div>
     </section>
