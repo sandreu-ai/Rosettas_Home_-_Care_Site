@@ -9,7 +9,7 @@ Date: 2026-05-24
 - GHL calendar: `Free Consultation` (`648cmOCtOjjeFrr9ZRJf`)
 
 ## Changes made
-- Corrected public email to `rosettashomecare57@gmail.com`.
+- Corrected public email to `admin@rosettahc.com`.
 - Corrected public site/domain references to `rosettashomecare.com`.
 - Replaced the local demo lead form with the official GHL/LeadConnector form iframe.
 - Removed the demo-only submit handler/toast.

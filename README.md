@@ -5,7 +5,7 @@ This version was rebuilt after inspecting the public website and corrected for `
 ## Public information preserved
 - Business name: Rosetta's Home & Care / Rosetta's Home & Care Services
 - Phone: (972) 878-7440
-- Email: rosettashomecare57@gmail.com
+- Email: admin@rosettahc.com
 - Address: 1425 N Dallas Ave STE 304 A, Lancaster, Texas 75134
 - Website: rosettashomecare.com
 - Logo: user-provided new RHC heart/home mark, cropped from screenshot UI and sharpened without redesigning the logo

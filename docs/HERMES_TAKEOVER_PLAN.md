@@ -30,7 +30,7 @@ Date: 2026-05-23
 
 ## Drift / issues to fix before launch
 - `tel:` links were corrected to `tel:+19728787440`.
-- Public email was corrected to `rosettashomecare57@gmail.com`.
+- Public email was corrected to `admin@rosettahc.com`.
 - Public website/domain references were corrected to `rosettashomecare.com`.
 - Phone/SMS is not fully live in GHL: no assigned/provisioned SMS-capable number was returned in the last audit, and A2P/10DLC remains pending.
 
