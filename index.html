@@ -171,19 +171,11 @@
     .contact-panel h2 { margin-bottom: 14px; }
     .contact-list { display: grid; gap: 12px; margin-top: 24px; }
     .contact-list a, .contact-list div { background: white; border: 1px solid var(--line); border-radius: 17px; padding: 14px 16px; color: var(--navy); font-weight: 850; }
-    .ghl-form-card { background: white; border: 1px solid var(--line); border-radius: var(--radius-xl); box-shadow: var(--shadow); padding: 26px; }
-    .form-card-intro { margin-bottom: 18px; display: grid; gap: 10px; }
-    .form-card-intro h2 { font-size: clamp(28px, 3vw, 40px); }
-    .form-card-intro p { margin: 0; color: var(--muted); }
+    .chat-card { background: white; border: 1px solid var(--line); border-radius: var(--radius-xl); box-shadow: var(--shadow); padding: 34px; display: grid; gap: 18px; }
+    .chat-card h2 { font-size: clamp(28px, 3vw, 40px); margin: 0; color: var(--navy); }
+    .chat-card p { margin: 0; color: var(--muted); }
     .btn-large { width: 100%; padding: 17px 22px; font-size: 18px; text-transform: uppercase; letter-spacing: .01em; }
-    .ghl-form-card iframe { display: block; width: 100%; min-height: 760px; border: 0; border-radius: 18px; background: #fff; }
-    .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    label { display: grid; gap: 7px; font-weight: 850; color: #31465a; font-size: 14px; }
-    input, select, textarea { width: 100%; border: 1px solid rgba(14,67,108,.22); border-radius: 14px; padding: 14px; font: inherit; outline: none; background: #fff; color: var(--ink); }
-    input:focus, select:focus, textarea:focus { border-color: var(--red); box-shadow: 0 0 0 4px rgba(205,0,54,.1); }
-    textarea { min-height: 125px; resize: vertical; }
     .full { grid-column: 1 / -1; }
-    .consent { margin: 15px 0 20px; color: #667987; font-size: 12.5px; }
 
     .cta-strip { background: var(--red); color: white; padding: 48px 0; }
     .cta-strip .container { display: flex; justify-content: space-between; align-items: center; gap: 22px; }
@@ -205,8 +197,6 @@
     .disclaimer { border-top: 1px solid rgba(255,255,255,.14); margin-top: 32px; padding-top: 18px; color: rgba(255,255,255,.62); font-size: 13px; }
 
     .mobile-call { position: fixed; left: 14px; right: 14px; bottom: 14px; z-index: 80; display: none; text-align: center; background: var(--red); color: white; padding: 15px 20px; border-radius: 999px; box-shadow: 0 18px 38px rgba(14,67,108,.28); font-weight: 1000; }
-    .toast { position: fixed; right: 18px; bottom: 18px; max-width: 380px; background: var(--navy-dark); color: white; padding: 16px 18px; border-radius: 18px; box-shadow: var(--shadow); opacity: 0; transform: translateY(12px); transition: .22s ease; pointer-events: none; z-index: 100; }
-    .toast.show { opacity: 1; transform: translateY(0); }
 
     @media (max-width: 980px) {
       .topbar .container { flex-direction: column; text-align: center; gap: 4px; }
@@ -215,19 +205,16 @@
       .hero-card, .hero-card > img { min-height: 420px; height: 420px; }
       .trust-row, .services-grid, .steps, .footer-grid { grid-template-columns: 1fr; }
       .contact-panel { position: static; }
-      .ghl-form-card { order: -1; }
       .cta-strip .container { flex-direction: column; text-align: center; align-items: stretch; }
       .mobile-call { display: block; }
-      .toast { left: 14px; right: 14px; bottom: 82px; max-width: none; }
     }
     @media (max-width: 620px) {
       .brand span { font-size: 17px; }
       .brand img { width: 60px; height: 42px; }
       .hero { padding: 48px 0 58px; }
       .hero-cta .btn { width: 100%; }
-      .fields { grid-template-columns: 1fr; }
       section { padding: 62px 0; }
-      .quote-card, .contact-panel, .ghl-form-card { padding: 22px; border-radius: 24px; }
+      .quote-card, .contact-panel, .chat-card { padding: 22px; border-radius: 24px; }
     }
   </style>
 </head>
@@ -270,7 +257,7 @@
           <p class="lead">Rosetta's Home & Care helps clients and families feel supported at home with personal care, light housekeeping, meal prep, medication reminders, errands, transportation, and appointment support.</p>
           <div class="hero-cta">
             <a class="btn btn-primary" href="#contact">Request a Free Home Care Consultation</a>
-            <a class="btn btn-navy" href="https://api.leadconnectorhq.com/widget/form/iUswI1hsIBB39NxcWbYG" target="_blank" rel="noopener">Fill Out Easy Intake Form</a>
+            <a class="btn btn-navy" href="#contact">Chat or Call Us</a>
             <a class="btn btn-outline" href="assets/home-care-physician-support-form.pdf" target="_blank" rel="noopener">Print Doctor Form</a>
           </div>
           <div class="trust-row">
@@ -293,35 +280,19 @@
       <div class="container contact-grid">
         <div class="contact-panel">
           <h2>Call now for a free home care consultation.</h2>
-          <p>Interested in high-quality service? Fill out the form and Rosetta's Home & Care will be in touch shortly.</p>
+          <p>Interested in high-quality service? Call, email, or use the website chat widget and Rosetta's Home & Care will be in touch shortly.</p>
           <div class="contact-list">
-            <a href="tel:+197****7440">Phone: (972) 878-7440</a>
+            <a href="tel:+19728787440">Phone: (972) 878-7440</a>
             <div>Fax: (214) 853-5987</div>
             <a href="mailto:admin@rosettahc.com">Email: admin@rosettahc.com</a>
             <div>Address: 1425 N Dallas Ave STE 304 A, Lancaster, Texas 75134</div>
-            <a href="https://api.leadconnectorhq.com/widget/booking/648cmOCtOjjeFrr9ZRJf">Book a free consultation</a>
           </div>
         </div>
-        <div class="ghl-form-card" aria-label="Free consultation request form">
-          <div class="form-card-intro">
-            <h2>Fill out the easy intake form.</h2>
-            <p>Share the care type, payment type, city, and best contact time. Please do not include diagnoses or medical details.</p>
-            <a class="btn btn-primary btn-large" href="https://api.leadconnectorhq.com/widget/form/iUswI1hsIBB39NxcWbYG" target="_blank" rel="noopener">Fill Out Easy Intake Form</a>
-          </div>
-          <iframe
-            src="https://api.leadconnectorhq.com/widget/form/iUswI1hsIBB39NxcWbYG"
-            id="inline-iUswI1hsIBB39NxcWbYG"
-            data-layout="1"
-            data-trigger-type="alwaysShow"
-            data-trigger-value=""
-            data-activation-type="alwaysActivated"
-            data-activation-value=""
-            data-deactivation-type="neverDeactivate"
-            data-deactivation-value=""
-            data-form-name="Rosetta's Home Care - Free Consultation Request"
-            data-form-id="iUswI1hsIBB39NxcWbYG"
-            title="Rosetta's Home Care - Free Consultation Request">
-          </iframe>
+        <div class="chat-card" aria-label="Website chat contact option">
+          <h2>Use the chat widget for a free consultation request.</h2>
+          <p>The website chat is the online request path for care information. It may ask for your contact details and SMS consent so Rosetta's Home & Care can follow up about your inquiry. Please do not send diagnoses, medical records, or emergency information through the website.</p>
+          <a class="btn btn-primary btn-large" href="tel:+19728787440">Call (972) 878-7440</a>
+          <a class="btn btn-outline btn-large" href="mailto:admin@rosettahc.com">Email admin@rosettahc.com</a>
         </div>
       </div>
     </section>
@@ -405,7 +376,7 @@
           <p>Start with a quick call or free home care consultation request, and Rosetta's Home & Care will help you understand the next step.</p>
         </div>
         <div class="steps">
-          <div class="step"><h3>Tell us what you need</h3><p>Call, email, or fill out the form with the type of help your loved one needs.</p></div>
+          <div class="step"><h3>Tell us what you need</h3><p>Call, email, or use the website chat with the type of help your loved one needs.</p></div>
           <div class="step"><h3>We follow up</h3><p>Rosetta's Home & Care reviews your request and contacts you to learn more.</p></div>
           <div class="step"><h3>Plan the next step</h3><p>Discuss service needs, timing, and how support can work in the home.</p></div>
         </div>
@@ -431,7 +402,7 @@
 
     <section class="cta-strip">
       <div class="container">
-        <div><h2>Need care information now?</h2><p>Call Rosetta's Home & Care directly or send a free consultation request.</p></div>
+        <div><h2>Need care information now?</h2><p>Call Rosetta's Home & Care directly or use the website chat widget to request information.</p></div>
         <a class="btn btn-outline" href="tel:+19728787440">Call (972) 878-7440</a>
       </div>
     </section>
@@ -445,9 +416,9 @@
         <div class="faq-grid">
           <details open><summary>What services does Rosetta's Home & Care provide?</summary><p>Services include personal care support, light housekeeping, medication reminders, meal prep, running errands, transportation, and organizing appointments or care coordination.</p></details>
           <details><summary>Where is Rosetta's Home & Care located?</summary><p>The business address is 1425 N Dallas Ave STE 304 A, Lancaster, Texas 75134.</p></details>
-          <details><summary>How do I request a free consultation?</summary><p>Call (972) 878-7440, email admin@rosettahc.com, or complete the consultation request form on this page.</p></details>
+          <details><summary>How do I request a free consultation?</summary><p>Call (972) 878-7440, email admin@rosettahc.com, or use the website chat widget on this page.</p></details>
           <details><summary>Is there a doctor form I can print for insurance paperwork?</summary><p>Yes. Download the Home Care Physician Support Form from the Resources section, bring it to the doctor to complete, and keep a copy for insurance or care coordination follow-up. Insurance approval is not guaranteed by the form.</p></details>
-          <details><summary>Do you provide emergency medical help?</summary><p>This website is for home care service inquiries. If this is a medical emergency, call 911. Do not submit emergency medical information through the website form.</p></details>
+          <details><summary>Do you provide emergency medical help?</summary><p>This website is for home care service inquiries. If this is a medical emergency, call 911. Do not submit emergency medical information through the website chat.</p></details>
         </div>
       </div>
     </section>
@@ -464,7 +435,7 @@
           <h3>Contact</h3>
           <ul>
             <li><a href="mailto:admin@rosettahc.com">admin@rosettahc.com</a></li>
-            <li><a href="tel:+197****7440">(972) 878-7440</a></li>
+            <li><a href="tel:+19728787440">(972) 878-7440</a></li>
             <li>Fax: (214) 853-5987</li>
             <li>1425 N Dallas Ave STE 304 A, Lancaster, Texas 75134</li>
           </ul>
@@ -476,6 +447,8 @@
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Free Consultation</a></li>
             <li><a href="#resources">Doctor Form PDF</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
             <li><a href="https://rosettashomecare.com/">Current website</a></li>
           </ul>
         </div>
@@ -485,6 +458,6 @@
   </footer>
 
   <a class="mobile-call" href="tel:+19728787440">Call Rosetta's Home & Care</a>
-  <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+  <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a15c7f7c10806bf190a537f" data-source="WEB_USER"></script>
 </body>
 </html>

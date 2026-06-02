@@ -5,30 +5,25 @@ Date: 2026-05-24
 ## Location inspected
 - Local static site: `/home/sandreu/rosettas-home-care-redesign`
 - Related GHL location from takeover docs: Rosetta's Home and Care (`FVa10mT06tUg01ylJdgk`)
-- GHL form: `Rosetta's Home Care - Free Consultation Request` (`iUswI1hsIBB39NxcWbYG`)
+- Current GHL chat widget: `6a15c7f7c10806bf190a537f`
 - GHL calendar: `Free Consultation` (`648cmOCtOjjeFrr9ZRJf`)
 
 ## Changes made
 - Corrected public email to `admin@rosettahc.com`.
 - Corrected public site/domain references to `rosettashomecare.com`.
-- Replaced the local demo lead form with the official GHL/LeadConnector form iframe.
+- A2P update replaced the embedded GHL/LeadConnector form iframe with the official chat widget and removed public form/booking links from the homepage.
 - Removed the demo-only submit handler/toast.
-- Added the LeadConnector embed script.
-- Added a secondary Free Consultation booking link in the contact card.
+- Added the LeadConnector chat widget script.
+- Removed booking/form links from the chat-widget homepage for A2P compliance.
 - Corrected public phone `tel:` links to the numeric phone URI.
 - Updated `README.md` and `docs/HERMES_TAKEOVER_PLAN.md` to reflect the new integration state.
 
 ## Tests performed
 - Confirmed the old email/domain/demo form strings are no longer present in the site project.
 - Confirmed `index.html` parses successfully with Python HTMLParser.
-- Confirmed GHL form URL returns HTTP 200.
-- Confirmed GHL booking URL returns HTTP 200.
-- Loaded the local page through a local HTTP server and verified the iframe is present in DOM with the correct form ID/source.
-- Loaded the GHL form URL directly and verified the form fields render in browser automation.
 
 ## Blockers / caveats
 - The GHL app/settings page rendered blank in this browser session, so I did not verify or change the live GHL business profile from the authenticated UI.
-- In the hosted browser screenshot, the iframe container displayed but the embedded fields appeared blank; the direct GHL form URL rendered correctly. This may be a browser/embedding/rendering issue and should be retested after deployment on the real domain.
 - SMS remains blocked until GHL phone assignment and A2P/10DLC readiness are verified.
 
 ## Privacy / sensitive-data handling
