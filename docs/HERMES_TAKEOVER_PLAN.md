@@ -13,12 +13,12 @@ Date: 2026-05-23
 ## Related GHL location
 - Business/location: Rosetta's Home and Care
 - GHL Location ID: `FVa10mT06tUg01ylJdgk`
-- Chat widget: LeadConnector/GHL website chat
-- Chat widget ID: `6a15c7f7c10806bf190a537f`
-- A2P rule: the chat widget is the only online SMS opt-in/contact collection method on pages where it is embedded
+- Intake form: `Rosetta's Home Care - Free Consultation Request`
+- Intake form ID: `iUswI1hsIBB39NxcWbYG`
+- Public form link: `https://api.leadconnectorhq.com/widget/form/iUswI1hsIBB39NxcWbYG`
 - Calendar: `Free Consultation`
 - Calendar ID: `648cmOCtOjjeFrr9ZRJf`
-- A2P homepage note: do not link/embed appointment forms on pages where the chat widget is embedded unless reviewed separately.
+- Public booking link: `https://api.leadconnectorhq.com/widget/booking/648cmOCtOjjeFrr9ZRJf`
 - Pipeline: `Home Care Leads`
 - Pipeline ID: `pBimdNHjV74ReFihJjR0`
 
@@ -26,7 +26,7 @@ Date: 2026-05-23
 - The page now embeds the official GHL intake form iframe for `Rosetta's Home Care - Free Consultation Request`.
 - The old local demo form and demo toast handler were removed.
 - A secondary Free Consultation booking link is present in the contact panel.
-- The LeadConnector chat widget script is loaded from `https://widgets.leadconnectorhq.com/loader.js`.
+- The LeadConnector form embed script is loaded from `https://link.msgsndr.com/js/form_embed.js`.
 
 ## Drift / issues to fix before launch
 - `tel:` links were corrected to `tel:+19728787440`.
@@ -35,14 +35,15 @@ Date: 2026-05-23
 - Phone/SMS is not fully live in GHL: no assigned/provisioned SMS-capable number was returned in the last audit, and A2P/10DLC remains pending.
 
 ## Safe GHL integration path
-1. Use the GHL chat widget as the website's online contact/SMS opt-in method on the homepage; do not add embedded forms that collect phone numbers or SMS consent on the same page.
+1. Replace the local demo form with the GHL intake form embed, or wire the existing custom form to a backend/serverless endpoint that posts into GHL.
 2. For fastest safe launch, use the official GHL iframe embed:
 
 ```html
-<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a15c7f7c10806bf190a537f" data-source="WEB_USER"></script>
+<iframe src="https://api.leadconnectorhq.com/widget/form/iUswI1hsIBB39NxcWbYG" style="width:100%;height:100%;border:none;border-radius:3px" id="inline-iUswI1hsIBB39NxcWbYG" data-layout="1" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="Rosetta's Home Care - Free Consultation Request" data-form-id="iUswI1hsIBB39NxcWbYG" title="Rosetta's Home Care - Free Consultation Request"></iframe>
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
 ```
 
-3. Keep CTAs pointed to phone, email, or the chat widget unless a separate non-widget page is created and reviewed for A2P compliance.
+3. Add the booking link as a secondary CTA: `https://api.leadconnectorhq.com/widget/booking/648cmOCtOjjeFrr9ZRJf`.
 4. Keep SMS claims conservative until A2P and an assigned number are verified.
 5. Test publicly after deployment: submit controlled test lead, verify contact, fields, opportunity, email response, and workflow path in GHL.
 

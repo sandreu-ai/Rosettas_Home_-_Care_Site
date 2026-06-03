@@ -25,7 +25,7 @@ This version was rebuilt after inspecting the public website and corrected for `
 - About detail: 15 years of medical-field experience
 
 ## GHL connection recommendation
-Main page now embeds the LeadConnector/GHL chat widget (`6a15c7f7c10806bf190a537f`) as the only online SMS opt-in/contact collection method on the page. The prior embedded GHL intake form and booking/form links were removed for A2P compliance.
+Main page now embeds the GHL form `Rosetta's Home Care - Free Consultation Request` (`iUswI1hsIBB39NxcWbYG`) so submissions go through GHL instead of the old local demo form. It should create/update contact, create opportunity in the Home Care Leads pipeline, apply tags/fields configured in GHL, notify owner, and send compliant email/SMS only where enabled. Privacy Policy and Terms pages remain live for A2P/TCR compliance.
 
 ## Safety
 No fake reviews, no invented license/certification claims, no 24/7 promise, and no emergency medical handling promise. Emergency copy directs visitors to call 911.
