@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.rosettahc.com"
+        }
+      ],
+      "destination": "https://rosettahc.com/$1",
+      "permanent": true
+    }
+  ]
+}
