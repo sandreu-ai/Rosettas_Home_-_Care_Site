@@ -121,7 +121,7 @@
           "name": "How do I request a free consultation?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Call (972) 878-7440, email admin@rosettahc.com, or complete the consultation request form on the page."
+            "text": "Call (972) 878-7440, email admin@rosettahc.com, or complete the consultation request form on this page."
           }
         },
         {
@@ -139,12 +139,46 @@
             "@type": "Answer",
             "text": "This website is for home care service inquiries. If this is a medical emergency, call 911. Do not submit emergency medical information through the website form."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Does sending the inquiry form schedule care or a consultation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The inquiry form starts a conversation with Rosetta's Home & Care. A consultation time, services, and availability must be confirmed separately."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What information should I share in the online form?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Share the type of everyday help requested, city, and preferred contact time. Do not submit diagnoses, medical records, or emergency details through the website form."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the website confirm insurance coverage or payment options?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Ask Rosetta's team about payment options, and check any coverage or reimbursement directly with the applicable payer. The printable doctor form does not guarantee approval or payment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Rosetta's offer medical treatment or skilled nursing through this site?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The services described here are non-medical daily-living support. This website does not advertise diagnosis, skilled nursing, or emergency treatment. Ask the team directly about your specific needs."
+          }
         }
       ]
     }
   ]
 }
   </script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
   <style>
     :root {
       --navy: #0e436c;
@@ -285,6 +319,7 @@
     .service-card .content { padding: 22px; }
     .service-card h3 { font-size: 21px; letter-spacing: -0.02em; }
     .service-card ul { margin: 10px 0 0; padding-left: 19px; color: #5b6d7b; }
+    .service-card .service-link { display: inline-block; margin-top: 14px; font-weight: 850; color: var(--navy); text-decoration: underline; text-underline-offset: 3px; }
 
     .resource-section { background: white; border-block: 1px solid var(--line); }
     .resource-card { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; background: var(--pale); border: 1px solid var(--line); border-radius: var(--radius-xl); padding: 30px; box-shadow: 0 14px 34px rgba(14,67,108,.06); }
@@ -435,7 +470,7 @@
           <h2>Call now for a free home care consultation.</h2>
           <p>Interested in high-quality service? Fill out the form and Rosetta's Home & Care will be in touch shortly.</p>
           <div class="contact-list">
-            <a href="tel:+197****7440">Phone: (972) 878-7440</a>
+            <a href="tel:+19728787440">Phone: (972) 878-7440</a>
             <div>Fax: (214) 853-5987</div>
             <a href="mailto:admin@rosettahc.com">Email: admin@rosettahc.com</a>
             <div>Address: 1425 N Dallas Ave STE 304-A, Lancaster, Texas 75134</div>
@@ -498,15 +533,15 @@
         <div class="services-grid">
           <article class="service-card">
             <img src="assets/personal-care.png" alt="Caregiver helping with personal care and grooming" />
-            <div class="content"><h3>Personal Care Services</h3><p>Respectful daily support with routines that help clients feel comfortable and cared for.</p><ul><li>Feeding assistance</li><li>Grooming support</li><li>Dressing assistance</li></ul></div>
+            <div class="content"><h3>Personal Care Services</h3><p>Respectful daily support with routines that help clients feel comfortable and cared for.</p><ul><li>Feeding assistance</li><li>Grooming support</li><li>Dressing assistance</li></ul><a class="service-link" href="personal-care-lancaster.html">Explore personal care →</a></div>
           </article>
           <article class="service-card">
             <img src="assets/housekeeping.png" alt="Caregiver helping with light housekeeping" />
-            <div class="content"><h3>Light Housekeeping</h3><p>Practical help keeping the home environment clean, organized, and manageable.</p><ul><li>Dusting, sweeping, mopping</li><li>Dishes and counters</li><li>Light laundry and trash removal</li></ul></div>
+            <div class="content"><h3>Light Housekeeping</h3><p>Practical help keeping the home environment clean, organized, and manageable.</p><ul><li>Dusting, sweeping, mopping</li><li>Dishes and counters</li><li>Light laundry and trash removal</li></ul><a class="service-link" href="light-housekeeping-lancaster.html">Explore light housekeeping →</a></div>
           </article>
           <article class="service-card">
             <img src="assets/meal-prep.png" alt="Caregiver preparing a meal at home" />
-            <div class="content"><h3>Meal Prep</h3><p>Meal support based on preferences, dietary needs, portions, and cleanup after meals.</p><ul><li>Meal planning support</li><li>Prepared meals</li><li>Kitchen cleanup</li></ul></div>
+            <div class="content"><h3>Meal Prep</h3><p>Meal support based on preferences, dietary needs, portions, and cleanup after meals.</p><ul><li>Meal planning support</li><li>Prepared meals</li><li>Kitchen cleanup</li></ul><a class="service-link" href="meal-preparation-lancaster.html">Explore meal preparation →</a></div>
           </article>
           <article class="service-card">
             <img src="assets/medication-reminders.png" alt="Caregiver reviewing a pill organizer reminder" />
@@ -518,7 +553,7 @@
           </article>
           <article class="service-card">
             <img src="assets/transportation.png" alt="Caregiver helping with transportation to appointments" />
-            <div class="content"><h3>Transportation & Appointments</h3><p>Support organizing appointments and getting to important errands or visits.</p><ul><li>Transportation support</li><li>Appointment reminders</li><li>Coordination with family members</li></ul></div>
+            <div class="content"><h3>Transportation & Appointments</h3><p>Support organizing appointments and getting to important errands or visits.</p><ul><li>Transportation support</li><li>Appointment reminders</li><li>Coordination with family members</li></ul><a class="service-link" href="transportation-appointments-lancaster.html">Explore appointment support →</a></div>
           </article>
         </div>
       </div>
@@ -588,6 +623,10 @@
           <details><summary>How do I request a free consultation?</summary><p>Call (972) 878-7440, email admin@rosettahc.com, or complete the consultation request form on this page.</p></details>
           <details><summary>Is there a doctor form I can print for insurance paperwork?</summary><p>Yes. Download the Home Care Physician Support Form from the Resources section, bring it to the doctor to complete, and keep a copy for insurance or care coordination follow-up. Insurance approval is not guaranteed by the form.</p></details>
           <details><summary>Do you provide emergency medical help?</summary><p>This website is for home care service inquiries. If this is a medical emergency, call 911. Do not submit emergency medical information through the website form.</p></details>
+          <details><summary>Does sending the inquiry form schedule care or a consultation?</summary><p>No. The inquiry form starts a conversation with Rosetta's Home & Care. A consultation time, services, and availability must be confirmed separately.</p></details>
+          <details><summary>What information should I share in the online form?</summary><p>Share the type of everyday help requested, city, and preferred contact time. Do not submit diagnoses, medical records, or emergency details through the website form.</p></details>
+          <details><summary>Does the website confirm insurance coverage or payment options?</summary><p>No. Ask Rosetta's team about payment options, and check any coverage or reimbursement directly with the applicable payer. The printable doctor form does not guarantee approval or payment.</p></details>
+          <details><summary>Does Rosetta's offer medical treatment or skilled nursing through this site?</summary><p>The services described here are non-medical daily-living support. This website does not advertise diagnosis, skilled nursing, or emergency treatment. Ask the team directly about your specific needs.</p></details>
         </div>
       </div>
     </section>
@@ -604,7 +643,7 @@
           <h3>Contact</h3>
           <ul>
             <li><a href="mailto:admin@rosettahc.com">admin@rosettahc.com</a></li>
-            <li><a href="tel:+197****7440">(972) 878-7440</a></li>
+            <li><a href="tel:+19728787440">(972) 878-7440</a></li>
             <li>Fax: (214) 853-5987</li>
             <li>1425 N Dallas Ave STE 304-A, Lancaster, Texas 75134</li>
           </ul>
@@ -613,6 +652,10 @@
           <h3>Quick links</h3>
           <ul>
             <li><a href="#services">Services</a></li>
+            <li><a href="personal-care-lancaster.html">Personal Care</a></li>
+            <li><a href="light-housekeeping-lancaster.html">Light Housekeeping</a></li>
+            <li><a href="meal-preparation-lancaster.html">Meal Preparation</a></li>
+            <li><a href="transportation-appointments-lancaster.html">Transportation & Appointments</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Free Consultation</a></li>
             <li><a href="#resources">Doctor Form PDF</a></li>
